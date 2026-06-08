@@ -11,7 +11,7 @@ export function CountryFilter({ countries, selected, onToggle }: CountryFilterPr
 
   return (
     <div className="mb-6">
-      <p className="text-[13px] text-ink-faded mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+      <p className="text-[16px] text-ink-faded mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
         按国家筛选
       </p>
       <div className="flex flex-wrap gap-1.5">
@@ -21,7 +21,7 @@ export function CountryFilter({ countries, selected, onToggle }: CountryFilterPr
             <button
               key={country}
               onClick={() => onToggle(country)}
-              className={`px-2 py-1 text-[13px] border transition-colors
+              className={`px-2 py-1 text-[16px] border transition-colors
                 ${isSelected
                   ? "bg-ink text-newsprint border-ink"
                   : "border-ink text-ink hover:bg-ink/10"
@@ -35,7 +35,7 @@ export function CountryFilter({ countries, selected, onToggle }: CountryFilterPr
         {selected.size > 0 && (
           <button
             onClick={() => countries.forEach((c) => onToggle(c))}
-            className="px-2 py-1 text-[13px] text-ink-faded hover:text-ink"
+            className="px-2 py-1 text-[16px] text-ink-faded hover:text-ink"
             style={{ fontFamily: "var(--font-newsprint-mono)" }}
           >
             清除

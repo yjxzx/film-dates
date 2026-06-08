@@ -18,7 +18,7 @@ export default function UpdatesPage() {
   return (
     <div>
       <h2 className="text-xl font-bold mb-2" style={{ fontFamily: "var(--font-newsprint-serif)" }}>更新日志</h2>
-      <p className="text-[13px] text-ink-faded mb-8" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+      <p className="text-[16px] text-ink-faded mb-8" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
         数据来源：Git 提交历史 · 自动生成 ·{" "}
         <Link href="/" className="underline hover:text-ink">
           返回首页
@@ -39,7 +39,7 @@ export default function UpdatesPage() {
               <ul className="space-y-2">
                 {grouped.get(date)!.map((entry, i) => (
                   <li key={i} className="flex gap-2 text-sm" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
-                    <span className={`shrink-0 text-[13px] px-1.5 py-0.5 border ${entry.type === "新增" ? "bg-ink text-newsprint border-ink" : "border-ink text-ink"}`}>
+                    <span className={`shrink-0 text-[16px] px-1.5 py-0.5 border ${entry.type === "新增" ? "bg-ink text-newsprint border-ink" : "border-ink text-ink"}`}>
                       {entry.type}
                     </span>
                     <span className="text-ink font-bold">{entry.title}</span>

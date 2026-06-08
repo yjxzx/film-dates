@@ -29,7 +29,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
             className="w-full object-contain"
           />
         ) : (
-          <span className="text-[13px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <span className="text-[16px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             POSTER
           </span>
         )}
@@ -38,57 +38,57 @@ export function MovieCard({ movie }: { movie: Movie }) {
       <div className="p-3">
         {/* Top row: title + import status */}
         <div className="flex justify-between items-start gap-2 mb-1.5">
-          <h3 className="text-sm font-bold text-ink leading-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
+          <h3 className="text-base font-bold text-ink leading-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
             {movie.title}
           </h3>
-          <span className="border border-ink px-1.5 py-0.5 text-[12px] whitespace-nowrap shrink-0" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <span className="border border-ink px-1.5 py-0.5 text-[15px] whitespace-nowrap shrink-0" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             {IMPORT_STATUS_LABEL[movie.importStatus] || movie.importStatus}
           </span>
         </div>
 
         {/* Original title + country */}
-        <p className="text-[13px] text-ink-light mb-2" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <p className="text-[16px] text-ink-light mb-2" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           {movie.originalTitle} · {movie.country.join("/")}
         </p>
 
         {/* Tags */}
         <div className="flex gap-1 flex-wrap mb-2">
           {movie.genres.map((g) => (
-            <span key={g} className="border border-ink px-1.5 py-0.5 text-[12px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+            <span key={g} className="border border-ink px-1.5 py-0.5 text-[15px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
               {g}
             </span>
           ))}
           {movie.releaseStatus === "热映中" && (
-            <span className="text-[12px] bg-ink text-newsprint px-1.5 py-0.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+            <span className="text-[15px] bg-ink text-newsprint px-1.5 py-0.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
               热映中
             </span>
           )}
           {movie.releaseStatus === "已下映" && (
-            <span className="text-[12px] text-ink-faded px-1.5 py-0.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+            <span className="text-[15px] text-ink-faded px-1.5 py-0.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
               已下映
             </span>
           )}
           {movie.distributor && (
-            <span className="text-[12px] text-ink-faded" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+            <span className="text-[15px] text-ink-faded" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
               {movie.distributor}
             </span>
           )}
         </div>
 
         {/* Date */}
-        <p className="text-[14px] font-bold text-ink mb-1" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <p className="text-[17px] font-bold text-ink mb-1" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           {displayDate}
           {movie.releaseStatus === "热映中" && " 上映"}
         </p>
 
         {/* Last updated */}
-        <p className="text-[12px] text-ink-faded mb-2" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <p className="text-[15px] text-ink-faded mb-2" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           更新于 {movie.lastUpdated}
         </p>
 
         {/* Sources */}
         {primarySource && (
-          <div className="text-[12px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <div className="text-[15px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             <span className="text-ink-faded">来源：</span>
             <a href={primarySource.url} target="_blank" rel="noopener noreferrer" className="text-ink underline hover:text-ink-light">
               {primarySource.name}
@@ -105,7 +105,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
         )}
 
         {showSources && extraSources.length > 0 && (
-          <div className="text-[12px] mt-1 space-y-0.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <div className="text-[15px] mt-1 space-y-0.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             {extraSources.map((s) => (
               <div key={s.name}>
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-ink underline hover:text-ink-light">
@@ -121,7 +121,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
           <div className="mt-2 pt-2 border-t border-dashed border-ink-faded">
             <button
               onClick={() => setShowTimeline(!showTimeline)}
-              className="text-[12px] text-ink-faded underline hover:text-ink"
+              className="text-[15px] text-ink-faded underline hover:text-ink"
               style={{ fontFamily: "var(--font-newsprint-mono)" }}
             >
               历史记录 ({movie.timeline.length})
@@ -129,7 +129,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
             {showTimeline && (
               <div className="mt-1 space-y-1">
                 {movie.timeline.map((event, i) => (
-                  <div key={i} className="text-[12px] flex gap-1.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+                  <div key={i} className="text-[15px] flex gap-1.5" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
                     <span className="text-ink-faded shrink-0">{event.date}</span>
                     <span className="text-ink-light">{event.event}</span>
                   </div>
