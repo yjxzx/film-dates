@@ -29,7 +29,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
             className="w-full object-contain"
           />
         ) : (
-          <span className="text-[18px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <span className="text-[16px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             POSTER
           </span>
         )}
@@ -41,7 +41,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
           <h3 className="text-base font-bold text-ink leading-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
             {movie.title}
           </h3>
-          <span className="border border-ink px-1.5 py-0.5 text-[15px] whitespace-nowrap shrink-0" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <span className="border border-ink px-1.5 py-0.5 text-[18px] whitespace-nowrap shrink-0" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             {IMPORT_STATUS_LABEL[movie.importStatus] || movie.importStatus}
           </span>
         </div>
