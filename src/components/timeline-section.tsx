@@ -31,15 +31,15 @@ export function TimelineSection({ month, movies, isCurrentMonth, isPastMonth }: 
         >
           {MONTH_NAMES[month]}
           {isCurrentMonth && (
-            <span className="ml-2 text-[10px] bg-ink text-newsprint px-1.5 py-0.5 align-middle" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+            <span className="ml-2 text-[13px] bg-ink text-newsprint px-1.5 py-0.5 align-middle" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
               当前
             </span>
           )}
         </h2>
-        <span className="text-[10px] text-ink-faded" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <span className="text-[13px] text-ink-faded" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           {movies.length} 部
         </span>
-        <span className="text-[10px] text-ink-faded ml-auto" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <span className="text-[13px] text-ink-faded ml-auto" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           {collapsed ? "▶ 展开" : "▼ 收起"}
         </span>
       </button>
@@ -52,7 +52,7 @@ export function TimelineSection({ month, movies, isCurrentMonth, isPastMonth }: 
             ))}
           </div>
         ) : (
-          <p className="text-[11px] text-ink-faded italic py-4 text-center border border-dashed border-ink-faded" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <p className="text-[14px] text-ink-faded italic py-4 text-center border border-dashed border-ink-faded" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             暂无定档影片
           </p>
         )

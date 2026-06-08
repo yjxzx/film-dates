@@ -10,11 +10,11 @@ export function Header() {
               外国电影定档速报
             </h1>
           </Link>
-          <p className="text-[10px] text-ink-faded mt-1" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <p className="text-[13px] text-ink-faded mt-1" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             FOREIGN FILMS IN CHINA · RELEASE TRACKER
           </p>
         </div>
-        <nav className="flex gap-4 text-[11px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <nav className="flex gap-4 text-[14px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           <Link href="/updates" className="text-ink underline hover:text-ink-light">
             更新日志
           </Link>

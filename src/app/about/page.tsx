@@ -24,7 +24,7 @@ export default async function AboutPage() {
         <MDXRemote source={source} />
       </div>
 
-      <p className="text-[10px] text-ink-faded mt-8" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+      <p className="text-[13px] text-ink-faded mt-8" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
         最后更新：{lastUpdated}
       </p>
 
