@@ -29,7 +29,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
             className="w-full object-contain"
           />
         ) : (
-          <span className="text-[16px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <span className="text-[18px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             POSTER
           </span>
         )}
