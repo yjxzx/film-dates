@@ -21,12 +21,12 @@ export function MovieCard({ movie }: { movie: Movie }) {
   return (
     <div className="border-print bg-newsprint">
       {/* Poster */}
-      <div className="w-full h-40 border-b border-dashed border-ink-faded flex items-center justify-center overflow-hidden bg-ink/5">
+      <div className="w-full border-b border-dashed border-ink-faded flex items-center justify-center bg-ink/5">
         {movie.poster ? (
           <img
             src={`/film-dates/images/${movie.poster}`}
             alt={movie.title}
-            className="w-full h-full object-cover"
+            className="w-full object-contain"
           />
         ) : (
           <span className="text-[10px] text-ink-faded tracking-wider" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
