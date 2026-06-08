@@ -6,15 +6,15 @@ export function Header() {
       <div className="flex items-end justify-between">
         <div>
           <Link href="/" className="hover:opacity-70 transition-opacity">
-            <h1 className="text-3xl font-bold text-ink tracking-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
+            <h1 className="text-2xl font-bold text-ink tracking-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
               外国电影定档速报
             </h1>
           </Link>
-          <p className="text-[16px] text-ink-faded mt-1" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+          <p className="text-[13px] text-ink-faded mt-1" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
             FOREIGN FILMS IN CHINA · RELEASE TRACKER
           </p>
         </div>
-        <nav className="flex gap-4 text-[17px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
+        <nav className="flex gap-4 text-[14px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
           <Link href="/updates" className="text-ink underline hover:text-ink-light">
             更新日志
           </Link>
