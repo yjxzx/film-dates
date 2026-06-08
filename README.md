@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 外国电影定档速报
 
-## Getting Started
+追踪外国电影在中国大陆的上映信息。
 
-First, run the development server:
+## 收录范围
+
+### A 类 — 必须收录
+确认引进 / 已定档 / 热映中 / 已下映
+
+### B 类 — 优先观察
+六大制片厂出品、日本动画剧场版、全球票房前50、知名IP续作
+
+### C 类 — 暂不收录
+电影节放映、纯流媒体、独立电影、地区限定发行
+
+## 贡献
+
+1. Fork 本仓库
+2. 在 `content/movies/` 下新建 `.mdx` 文件
+3. 提交 PR：`[新增] 片名` 或 `[更新] 片名 - 变更内容`
+4. 审核合并后自动部署
+
+## 数据格式
+
+参见 `content/movies/toy-story-5.mdx` 示例。
+
+## 开发
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev      # 启动开发服务器
+pnpm build    # 构建生产版本
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 技术
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js · Tailwind CSS · MDX · Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 灵感
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[yuc.wiki](https://yuc.wiki) — 長門番堂
