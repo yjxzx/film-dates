@@ -38,7 +38,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
       <div className="p-3">
         {/* Top row: title + import status */}
         <div className="flex justify-between items-start gap-2 mb-1.5">
-  <h3 className="text-2xl font-bold text-ink leading-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
+  <h3 className="text-[16px] font-bold text-ink leading-tight" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
     {movie.title}
   </h3>
           <span className="border border-ink px-1.5 py-0.5 text-[18px] whitespace-nowrap shrink-0" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
