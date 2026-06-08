@@ -24,6 +24,7 @@ export interface MovieFrontmatter {
   distributor?: string
   sources?: MovieSource[]
   timeline?: MovieTimelineEvent[]
+  poster?: string
 }
 
 export interface Movie extends MovieFrontmatter {
