@@ -17,7 +17,8 @@ interface TimelineSectionProps {
 }
 
 export function TimelineSection({ month, movies, isCurrentMonth, isPastMonth }: TimelineSectionProps) {
-  const [collapsed, setCollapsed] = useState(isPastMonth || movies.length === 0)
+  const hasHotMovie = movies.some((m) => m.releaseStatus === "热映中")
+  const [collapsed, setCollapsed] = useState(!hasHotMovie && (isPastMonth || movies.length === 0))
 
   return (
     <section className="mb-6">
