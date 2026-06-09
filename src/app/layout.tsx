@@ -3,6 +3,9 @@ import { Header } from "@/components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "WTJmLI-dd6di8l7wHl2PgdfzZEC_-XY8brwNp4rKViw",
+  },
   title: {
     default: "外国电影定档速报",
     template: "%s | 外国电影定档速报",
