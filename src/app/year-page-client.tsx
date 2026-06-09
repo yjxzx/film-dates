@@ -64,10 +64,14 @@ export function YearPageClient({
   const now = new Date()
   const currentMonth = now.getMonth() + 1
 
-  // Months starting from current month
-  const allMonths = Array.from({ length: 12 }, (_, i) => {
-    return ((currentMonth - 1 + i) % 12) + 1
-  })
+  // Months with movies first (sorted by calendar order), empty months follow
+  const allMonths = useMemo(() => {
+    const movieMonths = new Set(filteredByMonth.keys())
+    const withMovies = Array.from(movieMonths).sort((a, b) => a - b)
+    const withoutMovies = Array.from({ length: 12 }, (_, i) => i + 1)
+      .filter((m) => !movieMonths.has(m))
+    return [...withMovies, ...withoutMovies]
+  }, [filteredByMonth])
 
   return (
     <div>
