@@ -17,7 +17,7 @@ interface TimelineSectionProps {
 }
 
 export function TimelineSection({ month, movies, isCurrentMonth, isPastMonth }: TimelineSectionProps) {
-  const [collapsed, setCollapsed] = useState(isPastMonth)
+  const [collapsed, setCollapsed] = useState(isPastMonth || movies.length === 0)
 
   return (
     <section className="mb-6">
