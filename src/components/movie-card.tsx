@@ -86,6 +86,13 @@ export function MovieCard({ movie }: { movie: Movie }) {
           更新于 {movie.lastUpdated}
         </p>
 
+        {/* Description */}
+        {movie.content && (
+          <p className="text-[13px] text-ink-light mb-2 leading-relaxed" style={{ fontFamily: "var(--font-newsprint-serif)" }}>
+            {movie.content.trim()}
+          </p>
+        )}
+
         {/* Sources */}
         {primarySource && (
           <div className="text-[12px]" style={{ fontFamily: "var(--font-newsprint-mono)" }}>
